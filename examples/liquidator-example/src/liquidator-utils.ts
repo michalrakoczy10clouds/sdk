@@ -1,11 +1,11 @@
-import * as anchor from "@zetamarkets/anchor";
+import * as anchor from "@deriverse/anchor";
 import {
   constants,
   CrossClient,
   Exchange,
   programTypes,
   assets,
-} from "@zetamarkets/sdk";
+} from "@deriverse/sdk";
 
 export async function findAccountsAtRisk(
   accounts: anchor.ProgramAccount[]

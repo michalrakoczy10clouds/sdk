@@ -10,7 +10,7 @@ import {
   assets,
   events,
   constants,
-} from "@zetamarkets/sdk";
+} from "@deriverse/sdk";
 import { PublicKey, Connection, Keypair } from "@solana/web3.js";
 import fetch from "node-fetch";
 

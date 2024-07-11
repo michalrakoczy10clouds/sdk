@@ -7,7 +7,7 @@ import * as constants from "../../constants";
 import { Asset } from "../../constants";
 
 import { Connection } from "@solana/web3.js";
-import * as anchor from "@zetamarkets/anchor";
+import * as anchor from "@deriverse/anchor";
 import * as fs from "fs";
 import { DecodeType, returnDecodedType } from "./market-gen-utils";
 

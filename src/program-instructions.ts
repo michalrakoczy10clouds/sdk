@@ -9,7 +9,7 @@ import {
 } from "@solana/web3.js";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import * as utils from "./utils";
-import * as anchor from "@zetamarkets/anchor";
+import * as anchor from "@deriverse/anchor";
 import * as types from "./types";
 import { Asset } from "./constants";
 import * as constants from "./constants";

@@ -8,16 +8,16 @@ import {
   assets,
   programTypes,
   constants,
-} from "@zetamarkets/sdk";
+} from "@deriverse/sdk";
 import { PublicKey, Connection, Keypair } from "@solana/web3.js";
-import { Wallet } from "@zetamarkets/anchor";
+import { Wallet } from "@deriverse/anchor";
 import {
   cancelAllActiveOrders,
   findAccountsAtRisk,
   findLiquidatableAccounts,
   liquidateAccounts,
 } from "./liquidator-utils";
-import * as anchor from "@zetamarkets/anchor";
+import * as anchor from "@deriverse/anchor";
 
 import { airdropUsdc } from "./utils";
 

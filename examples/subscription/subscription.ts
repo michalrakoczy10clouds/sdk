@@ -8,7 +8,7 @@ import {
   programTypes,
   subscription,
   constants,
-} from "@zetamarkets/sdk";
+} from "@deriverse/sdk";
 
 import { PublicKey, Connection } from "@solana/web3.js";
 

@@ -9,7 +9,7 @@ import {
   getFeeBps,
 } from "./utils";
 import cloneDeep from "lodash.clonedeep";
-import * as anchor from "@zetamarkets/anchor";
+import * as anchor from "@deriverse/anchor";
 
 /**
  * Assemble a collected risk state Map<Asset, types.AssetRiskState>, describing important values on a per-asset basis.

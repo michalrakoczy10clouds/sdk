@@ -1,5 +1,5 @@
-import * as anchor from "@zetamarkets/anchor";
-import { BN } from "@zetamarkets/anchor";
+import * as anchor from "@deriverse/anchor";
+import { BN } from "@deriverse/anchor";
 import {
   ConfirmOptions,
   Connection,

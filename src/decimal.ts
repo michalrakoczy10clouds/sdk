@@ -1,7 +1,7 @@
 // Typescript port for rust decimal deserialization.
 
 import { AnchorDecimal } from "./program-types";
-import { BN } from "@zetamarkets/anchor";
+import { BN } from "@deriverse/anchor";
 
 const SCALE_MASK: number = 0x00ff_0000;
 const SCALE_SHIFT: number = 16;

@@ -10,7 +10,7 @@ import {
   Market,
   assets,
   types,
-} from "@zetamarkets/sdk";
+} from "@deriverse/sdk";
 import { PublicKey, Connection, Keypair } from "@solana/web3.js";
 
 let network: Network;

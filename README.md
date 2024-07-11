@@ -1,7 +1,7 @@
 <div align="center">
-  <img height="120px" src="./logo.png" />
+  <img height="120px" src="https://media.licdn.com/dms/image/D4E0BAQFwFS9URREfRw/company-logo_200_200/0/1708607365720/deriverse_logo?e=2147483647&v=beta&t=V9EpG1stUSRdH6bj6TdBSNQX7j8IDm9mZvvrhaa311c" />
 
-  <h1 style="margin-top: 0px">Zeta SDK 🔌</h1>
+  <h1 style="margin-top: 0px">deriverse SDK 🔌</h1>
 
   <p>
     <a href="https://discord.gg/dD7YREfBkR"
@@ -17,21 +17,21 @@
   </p>
 </div>
 
-## Zeta SDK
+## deriverse SDK
 
-This is the typescript library to interact with our Zeta program smart contract.
+This is the typescript library to interact with our deriverse program smart contract.
 
-[Learn more about Zeta.](https://docs.zeta.markets/)
+[Learn more about deriverse.](https://docs.deriverse.markets/)
 
-[Try out Zeta devnet.](https://devnet.zeta.markets/)
+[Try out deriverse devnet.](https://devnet.deriverse.markets/)
 
 ## Devnet variables
 
-| Key         |                     Value                     |
-| ----------- | :-------------------------------------------: |
-| NETWORK_URL |         https://api.devnet.solana.com         |
-| PROGRAM_ID  | BG3oRikW8d16YjUEmX3ZxHm9SiJzrGtMhsSR8aCw1Cd7  |
-| SERVER_URL  | https://dex-devnet-webserver-ecs.zeta.markets |
+| Key         |                       Value                        |
+| ----------- | :------------------------------------------------: |
+| NETWORK_URL |           https://api.devnet.solana.com            |
+| PROGRAM_ID  |    BG3oRikW8d16YjUEmX3ZxHm9SiJzrGtMhsSR8aCw1Cd7    |
+| SERVER_URL  | https://dex-devnet-webserver-ecs.deriverse.markets |
 
 ## Mainnet variables
 
@@ -44,7 +44,7 @@ PROGRAM_ID is subject to change based on redeployments.
 
 ## Context
 
-Zeta is a protocol that allows the trading of undercollateralized perpetual futures on Solana, using an orderbook matching system. Zeta is available with SOL, BTC, ETH, APT and ARB as underlying assets, with more to come!
+deriverse is a protocol that allows the trading of undercollateralized perpetual futures on Solana, using an orderbook matching system. deriverse is available with SOL, BTC, ETH, APT and ARB as underlying assets, with more to come!
 
 Native numbers are represented with BN to the precision of 6 d.p as u64 integers in the smart contract code.
 
@@ -75,7 +75,7 @@ utils.convertNativeBNToDecimal(balance); // == 10_000
 ## Install
 
 ```sh
-npm install @zetamarkets/sdk
+npm install @deriverse/sdk
 ```
 
 ## Getting started
@@ -102,14 +102,14 @@ At this point there will be .env file with your freshly created private key. Ope
 
 ```sh
 network_url=https://api.devnet.solana.com
-server_url=https://dex-devnet-webserver-ecs.zeta.markets
+server_url=https://dex-devnet-webserver-ecs.deriverse.markets
 ```
 
 Note that the default Solana RPC will probably rate-limit you. Now's a good time to find a better one - for starters check out Runnode, Alchemy or RPCPool.
 
 ### Basic setup boilerplate
 
-Now that you're set up, we can start loading the Zeta exchange! Start with the following code, which will set up all necessary connections, airdrop you some SOL + USDC (devnet only) and load the exchange.
+Now that you're set up, we can start loading the deriverse exchange! Start with the following code, which will set up all necessary connections, airdrop you some SOL + USDC (devnet only) and load the exchange.
 
 ```ts
 // Loads the local .env file into `process.env`.
@@ -126,7 +126,7 @@ import {
   assets,
   Decimal,
   constants,
-} from "@zetamarkets/sdk";
+} from "@deriverse/sdk";
 import fetch from "node-fetch";
 
 const NETWORK_URL = process.env["network_url"]!;
@@ -171,7 +171,7 @@ await Exchange.load(
 
 ### User margin accounts
 
-A user's state is represented by a `CrossMarginAccount` in the Zeta program. This is one account for all assets.
+A user's state is represented by a `CrossMarginAccount` in the deriverse program. This is one account for all assets.
 
 It stores all the state related to a user's balance, open orders and positions.
 
@@ -270,7 +270,7 @@ await client.placeOrder(asset, orderPrice, orderLots, types.Side.BID);
 
 ### See client order.
 
-Now that our order is placed we should see it on the orderbook. Either check in the SDK or navigate to https://devnet.zeta.markets/ to see it visually.
+Now that our order is placed we should see it on the orderbook. Either check in the SDK or navigate to https://devnet.deriverse.markets/ to see it visually.
 
 ```ts
 await client.updateState();
@@ -422,15 +422,15 @@ Can't fit all the instructions you want into a single transaction? Try using Add
 
 A full Versioned Transactions example is available in the examples subpage.
 
-## Zeta market data
+## deriverse market data
 
 Zeta market data is available through `Exchange.getZetaGroupMarkets(asset)`, which simplifies the data in `Exchange.getZetaGroup(asset)` to be more easily understood.
 
 Markets are indexed, and due to a legacy with options+futures, perps are index 137.
 
 ```ts
-// Whole zeta group markets object
-let zetaGroupMarkets = Exchange.getZetaGroupMarkets(asset);
+// Whole deriverse group markets object
+let deriverseGroupMarkets = Exchange.getderiverseGroupMarkets(asset);
 
 // Grab the perp market for the asset we care about
 let market = Exchange.getPerpMarket(asset);
@@ -443,7 +443,7 @@ See `src/markets.ts` to see full functionality.
 
 ## Viewing perp funding information
 
-Perp markets have a unique mechanic - funding rates ([Gitbook](https://docs.zeta.markets/zeta-protocol/zeta-infrastructure/perpetual-funding-system)). These values are stored in the Pricing account.
+Perp markets have a unique mechanic - funding rates ([Gitbook](https://docs.deriverse.markets/deriverse-protocol/deriverse-infrastructure/perpetual-funding-system)). These values are stored in the Pricing account.
 
 ```ts
 // Get the whole pricing account
@@ -477,7 +477,7 @@ See callbacks to update state live.
 
 ## Callbacks and state tracking
 
-Due to the number of changing states in the Zeta program, the SDK makes use of Solana websockets for users to receive callbacks when accounts are **polled and/or changed.**
+Due to the number of changing states in the deriverse program, the SDK makes use of Solana websockets for users to receive callbacks when accounts are **polled and/or changed.**
 
 There are two categories of callbacks, one relating to user state and the other to non-user based state (program state).
 
@@ -560,7 +560,7 @@ This was to ensure that:
 
 You can change this via setting `Exchange.pollInterval`.
 
-This will poll `Pricing` and zeta `State` accounts.
+This will poll `Pricing` and deriverse `State` accounts.
 
 ### Client polling and throttle
 

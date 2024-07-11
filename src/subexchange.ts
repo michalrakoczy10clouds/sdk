@@ -1,4 +1,4 @@
-import * as anchor from "@zetamarkets/anchor";
+import * as anchor from "@deriverse/anchor";
 import {
   PublicKey,
   Transaction,

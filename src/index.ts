@@ -7,7 +7,7 @@ import { Network } from "./network";
 import { Decimal } from "./decimal";
 import { Oracle, OraclePrice } from "./oracle";
 import idl from "./idl/zeta.json";
-import { Wallet } from "@zetamarkets/anchor";
+import { Wallet } from "@deriverse/anchor";
 import { Market } from "./market";
 
 import * as network from "./network";

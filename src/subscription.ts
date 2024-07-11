@@ -1,6 +1,6 @@
 import * as types from "./types";
 import { PublicKey, Context, KeyedAccountInfo } from "@solana/web3.js";
-import * as anchor from "@zetamarkets/anchor";
+import * as anchor from "@deriverse/anchor";
 import * as bs58 from "bs58";
 import { Asset } from "./constants";
 import { exchange as Exchange } from "./exchange";

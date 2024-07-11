@@ -1,4 +1,4 @@
-import * as anchor from "@zetamarkets/anchor";
+import * as anchor from "@deriverse/anchor";
 import { Orderbook, Market as SerumMarket, throwIfNull } from "./serum/market";
 import {
   AccountInfo,
