@@ -13,19 +13,21 @@
   },
   "dependencies": {
     "@bloxroute/solana-trader-client-ts": "2.1.0",
+    "@deriverse/anchor": "^0.0.1",
     "@pythnetwork/pyth-solana-receiver": "^0.8.0",
     "@solana/buffer-layout": "4.0.0",
     "@solana/spl-token": "0.1.6",
     "@solana/web3.js": "1.87.6",
-    "@deriverse/anchor": "^0.0.1",
     "axios": "^1.6.8",
+    "bip39": "^3.1.0",
     "bs58": "^4.0.1",
     "cross-fetch": "^3.1.6",
     "lodash": "^4.17.21",
     "lodash.clonedeep": "^4.5.0",
+    "micro-ed25519-hdkey": "^0.1.2",
     "obscenity": "0.2.0",
-    "zeta-solana-web3": "1.87.7",
-    "undici": "6.16.1"
+    "undici": "6.16.1",
+    "zeta-solana-web3": "1.87.7"
   },
   "devDependencies": {
     "@types/mocha": "^9.0.0",
@@ -36,7 +38,6 @@
     "typescript": "^4.4.2"
   },
   "resolutions": {
-    "@solana/buffer-layout": "4.0.0",
-    "rpc-websockets": "7.11.0"
+    "@solana/buffer-layout": "4.0.0"
   }
 }
